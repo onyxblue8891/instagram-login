@@ -1,0 +1,260 @@
+ *{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: auto;
+    width: 100%;   
+    overflow-y: scroll;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+.center-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.page-container{
+    width: 350px;
+    height:fit-content;
+    margin: 44px 50px 0px 50px;
+}
+
+
+.page-contents{
+    width: inherit;
+}
+
+.login-container{
+background-color: white;
+border: 1px solid lightgrey;
+height: 375px;
+}
+
+img{
+    width: auto;
+    height: 115px;
+}
+
+input{
+    background-color: #fafafa;
+    border: 1px solid lightgrey;
+    border-radius: 4pt;
+    width: 255px;
+    height: 35px;
+    padding: 0 0 0 0.7em;
+    font-size: 0.6em;
+    color: lightgrey;
+}
+
+input:focus{
+    outline: 0px solid grey;
+    border: 1.75px solid lightgrey;
+    border-radius: 5pt;
+}
+
+input[type="email"]{
+    margin-top: -20px;
+}
+input[type="password"]{
+    margin-top: -20px;
+}
+
+.login-button{
+    background-color: #b2dffc;
+    color: white;
+    font-weight: bold;
+    width: 265px;
+    height: 28px;
+    border: none;
+    border-radius: 3pt;
+    margin-top: -12.5px;
+}
+
+h2{
+    width:75%; 
+    text-align:center; 
+    border-bottom: 1px solid rgb(177, 177, 177); 
+    line-height:0.3em; 
+    margin-top:-20px;
+}
+h2 > span{
+    background:#ffff; 
+    padding:0 15px;
+    font-size: 0.4em;
+    color: rgb(177, 177, 177);
+}
+
+.facebook-login{
+    text-decoration: none;
+    color: darkblue;
+    font-size: 0.65em;
+    border: none;
+    margin-bottom: -10px;
+}
+.facebook-login::before{
+    content: 'f';
+    background-color: darkblue;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0.3px 3px -0px 6px;
+    margin-right: 7px;
+}
+
+.forgot-pw{
+    text-decoration: none;
+    color:darkblue;
+    font-size: 0.55em;
+    margin-bottom: 18px;
+}
+
+.signup-container{
+    border: 1px solid lightgrey;
+    background-color: white;
+    height: 57px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.signup-container > span{
+    font-size: 0.65em;
+    color: black;
+    margin-left: 75px;
+}
+.signup-container > a{
+    text-decoration: none;
+    color: #4287f5;
+    font-weight: 550;
+    font-size: 0.68em;
+    margin-right: 70px;
+}
+
+.get-the-app-container{
+    height: 70px;
+    margin-top: 25px;
+    width: 275px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.get-the-app-container > span{
+    flex: 1 0 100%;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    font-size: 0.65em;
+}
+.get-the-app-container > img{
+    flex: 0 1 133px;
+    height: 40px;
+    width: 100px;
+    margin-top: 11px;
+    
+}
+.tabs, .footer{
+    color: grey;
+    text-decoration: none;
+    font-size: 0.6em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tabs{
+    height: 1em;
+    margin: 65px 20px 10px 20px;
+    width: 500px;
+}
+
+.tabs > a{
+    text-decoration: none;
+    color: grey;
+}
+.footer{
+    height: 1em;
+    margin: 10px 20px 0 20px;
+    width: 500px;
+    justify-content: center;
+}
+
+.footer > span{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.ig-pic{
+    visibility:hidden;
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) 
+*/
+@media only screen and (max-width: 600px) {
+    body{
+        margin: 0;
+        background-color: white;
+        height: auto;
+        overflow-y: scroll;
+    }
+    .page-container{
+        border: none;
+        margin: 0;
+        display: flex;
+        position: fixed;
+        margin: 0;
+        flex:0 3 200px;
+        align-self: center;
+        justify-self: center;
+        
+    }
+    .login-container, .signup-container{
+        border: none;
+    }
+    
+    .tabs, .footer{
+        position: fixed;
+        flex-wrap: wrap;
+        top: 575px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .ig-pic{
+        visibility:visible;
+        display: flex;
+        width: 300px;
+        height: 550px;
+        object-fit:cover;
+        position: relative;
+        right: 175px;
+        top: 75px;
+    }
+    .page-container{
+        position: relative;
+        left: 175px;
+        bottom: 525px;
+    }
+    .tabs, .footer{
+        position: relative;
+        bottom: 525px;
+    }
+}
